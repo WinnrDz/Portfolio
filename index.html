@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of a web developer." />
+    <title>My Portfolio</title>
+    <link href="/src/input.css" rel="stylesheet" />
+    <script type="module" src="/src/script.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <style>
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .entrance {
+        animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+
+      .entrance-fade {
+        animation: fade-in 1.2s ease both;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-100 {
+        animation-delay: 100ms;
+        transition-delay: 100ms;
+      }
+      .delay-200 {
+        animation-delay: 200ms;
+        transition-delay: 200ms;
+      }
+      .delay-300 {
+        animation-delay: 300ms;
+        transition-delay: 300ms;
+      }
+      .delay-400 {
+        animation-delay: 400ms;
+        transition-delay: 400ms;
+      }
+      .delay-500 {
+        animation-delay: 500ms;
+        transition-delay: 500ms;
+      }
+      .delay-600 {
+        animation-delay: 600ms;
+        transition-delay: 600ms;
+      }
+      .delay-700 {
+        animation-delay: 700ms;
+        transition-delay: 700ms;
+      }
+      .delay-800 {
+        animation-delay: 800ms;
+        transition-delay: 800ms;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .entrance,
+        .entrance-fade {
+          animation: none;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#FFF1E6] text-[#49382F]">
+    <nav
+      class="bg-[#FFF1E6] flex items-center px-24 py-4 border-b border-[#49382F]/30 entrance-fade sticky top-0 w-full z-50"
+    >
+      <h1
+        class="text-3xl font-medium text-[#854D33] mr-[15%] entrance delay-100"
+      >
+        Rabah Boussebt
+      </h1>
+      <div
+        id="links"
+        class="flex gap-6 mr-auto text-[#786458] entrance delay-200"
+      >
+        <a href="#"> Home </a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+      </div>
+      <button
+        class="flex items-center gap-2 bg-[#C48B6C] text-[#FDF2E8] p-2 px-4 rounded-3xl entrance delay-300"
+      >
+        <a href="mailto:rabawinnr@gmail.com">Contact me</a>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+    </nav>
+
+    <main>
+      <div class="px-24 py-16 flex justify-between">
+        <div class="max-w-[50%]">
+          <div
+            class="text-[#BD8C75] font-bold text-lg tracking-widest mb-4 entrance delay-200"
+          >
+            WEB DEVELOPER
+          </div>
+
+          <h1
+            class="text-8xl font-bold leading-[1.05] tracking-tight text-[#422C25] entrance delay-400"
+          >
+            Building ideas<br />
+            into reality.
+          </h1>
+
+          <p
+            class="text-2xl mt-8 mb-10 leading-relaxed text-[#5D4A3E] entrance delay-600"
+          >
+            i create modern websites and interactive experiences <br />
+            with clean design and thoughtfull functionality
+          </p>
+
+          <a
+            href="#projects"
+            class="items-center gap-2 bg-[#C48B6C] text-[#FDF2E8] text-xl p-6 px-10 rounded-md mr-4 entrance delay-700"
+          >
+            Explore my work ->
+          </a>
+
+          <a
+            href="mailto:rabawinnr@gmail.com"
+            class="text-[#5D4A3E] text-xl p-6 px-10 border border-[#C48B6C] rounded-md entrance delay-800"
+          >
+            Contact me
+          </a>
+        </div>
+
+        <div class="max-w-[50%] entrance delay-500">
+          <img
+            src="/images/workspace.png"
+            alt="Warm developer workspace"
+            class="w-full rounded-2xl object-cover"
+          />
+        </div>
+      </div>
+
+      <div id="projects" class="bg-[#F3E2D7] px-24 py-16 scroll-mt-18">
+        <div
+          class="text-[#BD8C75] font-bold text-sm tracking-widest mb-3 reveal"
+        >
+          FEATURED PROJECTS
+        </div>
+
+        <h1
+          class="text-4xl font-bold leading-[1.05] tracking-wide text-[#422C25] mb-4 reveal delay-100"
+        >
+          Some of my work
+        </h1>
+
+        <div class="flex justify-between">
+          <div
+            class="bg-[#FFF1E6] max-w-[48%] rounded-2xl p-4 reveal delay-200"
+          >
+            <div class="relative">
+              <div class="bg-[#808068] px-16 pt-8 rounded-2xl overflow-hidden">
+                <img
+                  class="rounded-t-2xl shadow-[0px_30px_25px_18px_rgba(0,0,0,0.25)]"
+                  src="/images/clothing.png"
+                  alt="clothing Shop"
+                />
+              </div>
+              <div
+                class="bg-[#C48B6C] text-[#FDF2E8] absolute top-[93%] right-[79%] z-10 px-3 py-1 rounded-2xl"
+              >
+                Laravel
+              </div>
+            </div>
+
+            <h1 class="mt-8 font-bold text-xl tracking-wider mb-2">
+              Clothing E-Commerce
+            </h1>
+            <p class="leading-relaxed text-[#5D4A3E] mb-6">
+              A modern online store built with Laravel and Livewire, featuring a
+              clean design and smooth shopping experience.
+            </p>
+            <a class="text-[#BD8C75] cursor-pointer font-bold"
+              >View project -></a
+            >
+          </div>
+
+          <div
+            class="bg-[#FFF1E6] max-w-[48%] rounded-2xl p-4 reveal delay-400"
+          >
+            <div class="relative">
+              <div class="bg-[#808068] px-16 pt-8 rounded-2xl overflow-hidden">
+                <img
+                  class="rounded-t-2xl shadow-[0px_30px_25px_18px_rgba(0,0,0,0.25)]"
+                  src="/images/gestion.jpg"
+                  alt="treasury management"
+                />
+              </div>
+              <div
+                class="bg-[#C48B6C] text-[#FDF2E8] absolute top-[93%] right-[79%] z-10 px-3 py-1 rounded-2xl"
+              >
+                Laravel
+              </div>
+            </div>
+
+            <h1 class="mt-8 font-bold text-xl tracking-wider mb-2">
+              Treasury Management
+            </h1>
+            <p class="leading-relaxed text-[#5D4A3E] mb-6">
+              A web application for managing finances and human resources, built
+              with Laravel and a modern admin dashboard.
+            </p>
+            <a class="text-[#BD8C75] cursor-pointer font-bold"
+              >View project -></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div id="about" class="flex gap-10 p-20">
+        <div class="max-w-[20%] reveal">
+          <img
+            src="/images/me.png"
+            alt="My workspace"
+            class="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+
+        <div class="max-w-[55%]">
+          <div
+            class="text-[#BD8C75] font-bold text-sm tracking-widest mb-3 reveal"
+          >
+            ABOUT ME
+          </div>
+
+          <h1
+            class="text-4xl font-bold leading-[1.05] tracking-wider text-[#422C25] reveal delay-100"
+          >
+            Turning ideas into reality.
+          </h1>
+
+          <p
+            class="text-2xl mt-8 mb-10 leading-relaxed text-[#5D4A3E] reveal delay-200"
+          >
+            I'm a passionate developer focused on building smooth, modern and
+            useful web experiences. I enjoy solving problems, learning new
+            technologies and bringing ideas to life through code.
+          </p>
+
+          <div class="flex justify-between">
+            <div class="flex items-center gap-4 reveal delay-300">
+              <i
+                data-lucide="code-xml"
+                class="bg-[#F3E2D7] text-[#BD8C75] w-11 h-11 p-[8px] rounded-full"
+              ></i>
+              <div>Web Development</div>
+            </div>
+
+            <div class="flex items-center gap-4 reveal delay-400">
+              <i
+                data-lucide="puzzle"
+                class="bg-[#F3E2D7] text-[#BD8C75] w-11 h-11 p-[8px] rounded-full"
+              ></i>
+              <div>Problem Solving</div>
+            </div>
+
+            <div class="flex items-center gap-4 reveal delay-500">
+              <i
+                data-lucide="graduation-cap"
+                class="bg-[#F3E2D7] text-[#BD8C75] w-11 h-11 p-[8px] rounded-full"
+              ></i>
+              <div>Continuous Learning</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col justify-around max-w-[25%] border border-[#BD8C75]/30 rounded-2xl reveal delay-300"
+        >
+          <div class="flex items-center gap-4 p-4">
+            <i
+              data-lucide="layout-template"
+              class="bg-[#F3E2D7] text-[#BD8C75] w-13 h-13 p-[8px] rounded-full"
+            ></i>
+            <div>
+              <div class="font-bold">2+</div>
+              <div class="opacity-70">Projects Completed</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-4">
+            <i
+              data-lucide="code-xml"
+              class="bg-[#F3E2D7] text-[#BD8C75] w-13 h-13 p-[8px] rounded-full"
+            ></i>
+            <div>
+              <div class="font-bold">3+</div>
+              <div class="opacity-70">Years of experience</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-4">
+            <i
+              data-lucide="heart"
+              class="bg-[#F3E2D7] text-[#BD8C75] w-13 h-13 p-[8px] rounded-full"
+            ></i>
+            <div>
+              <div class="font-bold">100%</div>
+              <div class="opacity-70">Passion for what i do</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="flex gap-10 bg-[#8E8F78] px-24 py-4 text-white items-center reveal"
+    >
+      <h1 class="whitespace-nowrap text-3xl font-medium">Rabah Boussebt</h1>
+
+      <div class="flex justify-between w-full items-center">
+        <div>© 2026 Rabah Boussebt. All rights reserved.</div>
+
+        <div class="flex items-center gap-5">
+          <a
+            href="https://github.com/WinnrDz"
+            class="max-w-10 max-h-10 p-2 bg-[#9C9C86] rounded-full"
+          >
+            <img class="object-contain" src="/images/github.png" alt="" />
+          </a>
+
+          <a href="" class="max-w-10 max-h-10 p-2 bg-[#9C9C86] rounded-full">
+            <img class="object-contain" src="/images/linkedin.png" alt="" />
+          </a>
+
+          <a
+            href="mailto:rabawinnr@gmail.com"
+            class="max-w-10 max-h-10 p-2 bg-[#9C9C86] rounded-full"
+          >
+            <img class="object-contain" src="/images/google.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+        },
+      );
+
+      document.querySelectorAll(".reveal").forEach((element) => {
+        observer.observe(element);
+      });
+    </script>
+  </body>
+</html>
